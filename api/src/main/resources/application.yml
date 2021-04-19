@@ -1,0 +1,35 @@
+logging:
+    level:
+        org:
+            hibernate:
+                stat: debug
+                type: trace
+server:
+    error:
+        whitelabel:
+            enabled: false
+    port: 8080
+spring:
+    data:
+        jpa:
+            repositories:
+                bootstrap-mode: default
+    datasource:
+        driverClassName: org.h2.Driver
+        password: ''
+        url: jdbc:h2:mem:testdb
+        username: sa
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                format_sql: true
+                generate_statistics: true
+                validator:
+                    apply_to_ddl: false
+        show-sql: true
